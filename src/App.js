@@ -1,5 +1,5 @@
 import React from 'react';
-// import './App.css';
+import './App.css';
 import RecipeSearcher from './components/RecipeSearcher/RecipeSearcher'
 
 function App() {
