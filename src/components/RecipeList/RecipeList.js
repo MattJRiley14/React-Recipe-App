@@ -37,15 +37,21 @@ class RecipeList extends Component {
     }
 
     render() {
+        console.log(this.props.recipes);
 
-        console.log(this.props.recipes);        
+        if (this.props.firstLoad === true) {
+            return <h1>Please search for a recipe</h1>
+        } else if (this.props.recipes.length > 0) {
 
-        return (
-            // <div>
-            //     {this.displayText()}
-            // </div>
-            <ul>{this.getListItems()}</ul>
-        );
+            return (
+                // <div>
+                //     {this.displayText()}
+                // </div>
+                <ul>{this.getListItems()}</ul>
+                );
+            } else {
+                return <h1>No recipes found. Please try another letter or keyword</h1>
+            }
     }
 }
 
