@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { get } from 'https';
+// import { get } from 'https';
 
 class RecipeList extends Component {
 
@@ -30,7 +30,7 @@ class RecipeList extends Component {
             const ingredientIdentifier = 'strIngredient' + i;
             const amountIdentifier = 'strMeasure' + i;
             if (recipe[ingredientIdentifier] !== '' && recipe[ingredientIdentifier] !== null){
-                output.push(<li>{recipe[ingredientIdentifier]}: {recipe[amountIdentifier]}</li>);
+                output.push(<li key={i}>{recipe[ingredientIdentifier]}: {recipe[amountIdentifier]}</li>);
             }
         }
         return output;
